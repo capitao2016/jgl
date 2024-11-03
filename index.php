@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JGL HORTIFRUTI</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+    <script src="https://kit.fontawesome.com/70c6f55f6a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="menu">menu</div>
+        <div class="slogan">
+            <h2 class="title">JGL HORTIFRUT</h2>
+        </div>
+        <div class="box_cart">
+            <!-- <p class="valor">120,00</p> -->
+            <div class="cart">
+                <p class="qnt">10</p>
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+        </div>
+    </div>
+    <nav>
+        <a href="frutas.php" target="frame"><div class="frutas"></div></a>
+        <a href="verduras.php" target="frame"><div class="verduras"></div></a>
+        <div class="hortaliças"></div>
+        <div class="raizes"></div>
+    </nav>
+    <section class="barraBusca">
+        <form action="https:www.youtube.com" target="frame" method="post">
+            <input type="text" name="buscar" class="inputBuscar"  placeholder="Faça sua busca...">
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+    </section>
+    <iframe src="" frameborder="0" name="frame" id="frame"></iframe>
+
+</body>
+</html>

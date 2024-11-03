@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* pagina index */
+.header{
+    position: fixed;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    height: 60px;
+    background-color: #801818;
+    color: white;
+    grid-template-areas: 
+    "menu slogan slogan slogan slogan cart";
+
+    .menu{
+        width: 50px;
+        background-color: beige;
+        color: black;
+        grid-area: menu;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slogan{
+        grid-area: slogan;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .title{
+            font-size: 22px;
+            word-spacing: 5px;
+            letter-spacing: 1px;
+        }
+    }
+
+    .box_cart{
+        grid-area: cart;
+        /* display: flex; */
+
+        .cart{
+            border: 1px solid black;
+
+            .qnt{
+                position: relative;
+                text-align: center;
+                color: black;
+                font-size: 25px;
+                margin-top: 15px;
+                margin-left: 36px;
+            }
+            i{
+                display: flex;
+                justify-content: end;
+                margin-top: -26px;
+                font-size: 30px;
+            }
+        }
+        .valor{
+            font-weight: bold;
+            font-size: 10px;
+            text-align: center;
+        }
+    }
+}
+nav{
+    position: fixed;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100vw;
+    margin: 70px 0;
+
+    p{
+        margin: 30px -5px;
+    }
+    div{
+        border: 1px solid black;
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        box-shadow: 0 0 5px 1px black;
+        padding: 25px;
+    }
+    .frutas{
+        background-image: url(Imagens/Frutas/Goiaba.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .verduras{
+        background-image: url(Imagens/Verduras/cenoura.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .hortaliças{
+        background-image: url(Imagens/Hortaliças/repolho.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .raizes{
+        background-image: url(Imagens/Raizes/Macaxeira.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+.barraBusca{
+    position: fixed;
+    width: 100vw;
+    margin: 140px 0;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #801818;
+    padding: 2px;
+
+    form{
+        display: flex;
+        
+        .inputBuscar{
+            outline: none;
+            width: 100%;
+            height: 30px;
+            padding: 5px;
+            border-radius: 10px 0 0 10px;
+            border: none;
+            box-shadow: 0 0 5px 1px black;
+            font-size: 20px;
+        }
+        button{
+            margin-left: 5px;
+            width: 12%;
+            border-radius: 0 10px 10px 0;
+            border: none;
+            box-shadow: 0 0 5px 1px black;
+            i{
+                font-size: 25px;
+                font-weight: bold;
+            }
+        }
+
+    }
+}
+iframe{
+    position: fixed;
+    margin-top: 190px;
+    width: 100vw;
+    height: 100%;
+    background-color: white;
+}
+/* pagina dos produtos */
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 10px;
+    width: 100%;
+    background-color: white;
+
+    .card{
+        border-radius: 10px;
+        box-shadow: 0 0 10px 2px black;
+        
+        img{
+            width: 100%;
+            height: 120px;
+            border-radius: 10px 10px 0 0;
+        }
+        .titulo p{
+            font-weight: bold;
+            letter-spacing: 2px;
+            font-size: 22px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+            background-color: #801818;
+            color: white;
+        }
+/* escolher as opções de compras */
+        .box_opc{
+            margin-top: 10px;
+
+            .input_opc{
+                margin: 5px 10px;
+            }
+            label{
+                font-size: 16px;
+                font-weight: bold;
+            }
+/* escolher a quantidade de itens */
+            .box_qnt{
+                margin-top: 12px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+               
+                .input_qnt{
+                    text-align: center;
+                    width: 50px;
+                    /* height: 50px; */
+                    font-size: 25px;
+                    font-weight: bold;
+                    outline: none;
+                    border: none;
+                }
+                .btn_menos{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 30%;
+                    height: 30px;
+                    border-radius: 5px;
+                    font-size: 30px;
+                    font-weight: bold;
+                }
+                .btn_mais{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 30%;
+                    height: 30px;
+                    border-radius: 5px;
+                    font-size: 25px;
+                    font-weight: bold;
+                }
+            }
+/* botao adicionar ao carrinho de compras */
+            .btn_adicionar{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                font-size: 18px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                padding: 5px;
+                letter-spacing: 2px;
+                background-color: #801818;
+                color: white;
+                margin-top: 20px;
+                border-radius: 0 0 10px 10px;
+            }
+        }
+    }
+}
+
+/* pagina de cadastro de produtos */
+
+.form{
+    width: 80%;
+    margin: 10px 10%;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px 2px black;
+    border-radius: 10px;
+
+    .titulo{
+        width: 80%;
+    }
+    .preco{
+        width: 20%;
+    }
+    input{
+        margin-top: 5px;
+    }
+}
