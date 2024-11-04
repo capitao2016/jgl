@@ -13,7 +13,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JGL HORTIFRUTI</title>
+    <title>PRODUTOS</title>
     <link rel="stylesheet" href="style.css">
     <script src="index.js" defer></script>
     <script src="https://kit.fontawesome.com/70c6f55f6a.js" crossorigin="anonymous"></script>
