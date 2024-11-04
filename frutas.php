@@ -1,10 +1,5 @@
 <?php 
-
     include_once("conexao.php");
-
-// acessar o banco de dados
-    $sql_frutas = "SELECT * FROM cadastro_produtos ORDER BY id DESC";
-    $resultado = $connexxao-> query($sql_frutas);
 ?>
 
 
@@ -20,6 +15,11 @@
 </head>
 <body>
 <!-- Mostrar os dados do banco de dados -->
+<?php
+// acessar o banco de dados
+    $sql_frutas = "SELECT * FROM cadastro_produtos ORDER BY id DESC";
+    $resultado = $connexxao-> query($sql_frutas);
+?>
     <div class="container">
         <div class="card">
                 <?php
@@ -51,7 +51,8 @@
                     </div>
                     <!-- botão de incluir o produto no carrinho -->
                     <button class="btn_adicionar" type="submit" name="submit"><i class="fa-solid fa-cart-shopping"></i>ADICIONAR</button>
-                </div>
+                </div><br>
+
                 <?php
                     }
                 ?>

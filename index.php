@@ -29,12 +29,12 @@
         <div class="raizes"></div>
     </nav>
     <section class="barraBusca">
-        <form target="frame" method="post" name="buscar" netlify>
+        <form target="frame" method="post" name="buscar">
             <input type="text" name="buscar" class="inputBuscar"  placeholder="Faça sua busca...">
             <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
     </section>
-    <iframe src="" frameborder="0" name="frame" id="frame"></iframe>
-
+    
+    <iframe frameborder="0" name="frame" id="frame"></iframe>
 </body>
 </html>
