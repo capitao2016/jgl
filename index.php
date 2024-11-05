@@ -1,40 +1,58 @@
+<?php 
+    include_once("conexao.php");
+?>
+<?php
+// acessar o banco de dados
+    $sql_frutas = "SELECT * FROM cadastro_produtos ORDER BY id DESC";
+    $resultado = $connexxao-> query($sql_frutas);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JGL HORTIFRUTI</title>
+    <title>PRODUTOS</title>
     <link rel="stylesheet" href="style.css">
     <script src="index.js" defer></script>
     <script src="https://kit.fontawesome.com/70c6f55f6a.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="header">
-        <div class="menu">menu</div>
-        <div class="slogan">
-            <h2 class="title">JGL HORTIFRUT</h2>
-        </div>
-        <div class="box_cart">
-            <!-- <p class="valor">120,00</p> -->
-            <div class="cart">
-                <p class="qnt">10</p>
-                <i class="fa-solid fa-cart-shopping"></i>
-            </div>
-        </div>
+    <div class="box">
+         <?php
+            while ($sql_frutas =  mysqli_fetch_assoc($resultado)){
+                
+        ?>
+        <table>
+            <td colspan="3"><img src="<?php echo $sql_frutas['imagemNome'];?>"></td>
+            <tr>
+                <td colspan="3" class="titulo"><?php echo $sql_frutas['titulo'];?></td>
+            </tr>
+            <tr class="opc">
+                <td class="opc">
+                    <input type="radio" name="radio" id="qnt1">
+                    <label for="qnt1"><span class="qnt">6 Unidades</span><span class="valor">R$ 5,00</span></label>
+                </td>
+                <tr>
+                    <td class="opc">
+                        <input type="radio" name="radio" id="qnt2">
+                        <label for="qnt2"><span class="qnt">6 Unidades</span><span class="valor">R$ 5,00</span></label>
+                    </td>
+                </tr>
+            </tr>
+            <!-- opções de Unidades -->
+            <tr>
+                <td class="numeros">
+                    <button class="btn_menos">-</button>
+                    <input type="text" name="numero" class="numero" value="1">
+                    <button class="btn_mais">+</button>
+                </td>
+            </tr>
+        </table>
+        <?php
+            }
+        ?>
     </div>
-    <nav>
-        <a href="frutas_teste.php" target="frame"><div class="frutas"></div></a>
-        <a href="verduras.php" target="frame"><div class="verduras"></div></a>
-        <div class="hortaliças"></div>
-        <div class="raizes"></div>
-    </nav>
-    <section class="barraBusca">
-        <form target="frame" method="post" name="buscar">
-            <input type="text" name="buscar" class="inputBuscar"  placeholder="Faça sua busca...">
-            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-        </form>
-    </section>
-    
-    <iframe frameborder="0" name="frame" id="frame"></iframe>
+
 </body>
 </html>
