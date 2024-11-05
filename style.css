@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 /* pagina index */
 .header{
     position: fixed;
@@ -152,9 +153,9 @@ iframe{
 }
 /* pagina dos produtos */
 .container{
-    margin-bottom: 10px;
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     background-color: white;
 
     .card{
@@ -243,7 +244,7 @@ iframe{
 }
 
 /* pagina de cadastro de produtos */
-.form{
+/* .form{
     width: 80%;
     margin: 10px 10%;
     padding: 10px;
@@ -259,5 +260,57 @@ iframe{
     }
     input{
         margin-top: 5px;
+    }
+} */
+
+
+.box{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px 3px;
+    background-color: gray;
+
+    table{
+        border: 3px solid black;
+        background-color: white;
+
+        img{
+            width: 100%;
+        }
+        .titulo{
+            width: 100%;
+            background-color: #801818;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            font-size: 25px;
+            padding: 5px;
+        }
+        .opc{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            padding: 5px;
+        }
+        .qnt, .valor{
+            padding: 5px;
+        }
+        .numeros{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .numero{
+                width: 40px;
+                text-align: center;
+                font-weight: bold;
+                border: none;
+            }
+            button{
+                width: 50px;
+            }
+        }
     }
 }

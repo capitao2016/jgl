@@ -23,7 +23,7 @@
         </div>
     </div>
     <nav>
-        <a href="frutas.php" target="frame"><div class="frutas"></div></a>
+        <a href="frutas_teste.php" target="frame"><div class="frutas"></div></a>
         <a href="verduras.php" target="frame"><div class="verduras"></div></a>
         <div class="hortaliças"></div>
         <div class="raizes"></div>
