@@ -23,7 +23,7 @@
             while ($sql_frutas =  mysqli_fetch_assoc($resultado)){
                 
         ?>
-        <table>
+        <table class="container">
             <td colspan="3"><img src="<?php echo $sql_frutas['imagemNome'];?>"></td>
             <tr>
                 <td colspan="3" class="titulo"><?php echo $sql_frutas['titulo'];?></td>
