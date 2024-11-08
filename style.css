@@ -152,10 +152,10 @@ iframe{
     height: 100vh;
 }
 /* pagina dos produtos */
-.container{
+.box{
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     background-color: white;
 
     .card{
@@ -164,7 +164,7 @@ iframe{
         
         img{
             width: 100%;
-            height: 120px;
+            /* height: 120px; */
             border-radius: 10px 10px 0 0;
         }
         .titulo p{
@@ -263,7 +263,7 @@ iframe{
     }
 } */
 
-
+/* 
 .box{
     width: 100vw;
     display: grid;
@@ -313,4 +313,4 @@ iframe{
             }
         }
     }
-}
+} */
