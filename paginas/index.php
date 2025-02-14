@@ -14,28 +14,29 @@
         <div class="menu"><i class="fa-solid fa-bars"></i></div>
     </header>
     <nav class="modal-menu">
-        <li>Home</li>
-        <li>Area do Admin</li>
-        <li>Area dos Clientes</li>
-        <li>Contatos</li>
-        <li>Sobre</li>
+        <a href="index.php"><li>Home</li></a>
+        <a href="cadastro_produtos.php"><li>Cadastro de Produtos</li></a>
+        <a href="admin.php"><li>Area do Admin</li></a>
+        <a href=""><li>Area dos Clientes</li></a>
+        <a href=""><li>Contatos</li></a>
+        <a href=""><li>Sobre</li></a>
     </nav>
     <section class="category-menu">
-        <a href="../paginas/products.html" target="frame">
+        <a href="../paginas/frutas.php" target="frame">
             <div class="itens">
                 <div class="quadro"></div>
                 <img src="../Imagens/Frutas/Banana Prata.png" alt="frutas">
                 <p>FRUTAS</p>
             </div>
         </a>
-        <a href="" target="frame">
+        <a href="../paginas/verduras.php" target="frame">
             <div class="itens">
                 <div class="quadro"></div>
                 <img src="../Imagens/Verduras/tomato.png" alt="verduras">
                 <p>VERDURAS</p>
             </div>
         </a>
-        <a href="" target="frame">
+        <a href="../paginas/raizes.php" target="frame">
             <div class="itens">
                 <div class="quadro"></div>
                 <img src="../Imagens/Raizes/batata-doce.png" alt="raizes">
@@ -43,10 +44,10 @@
             </div>
         </a>
     </section>
-    <div class="barra-seach">
-       <div class="box-seach">
+    <div class="barra-search">
+       <div class="box-search">
         <input type="text" autofocus maxlength="20" placeholder="O que você procura...?">
-        <button type="submit" name="seach" class="btn-seach">
+        <button type="submit" name="search" class="btn-search">
             <i class="fa-solid fa-magnifying-glass"></i>
         </button>
        </div>
@@ -64,5 +65,6 @@
     
         </iframe>
     </main>
+    <input type="text" maxlength="">
 </body>
 </html>

@@ -18,6 +18,7 @@ body{
 }
 header{
     position: fixed;
+    top: 0;
     display: grid;
     grid-template-columns: repeat(2, 90% 10%);
     align-items: center;
@@ -40,6 +41,7 @@ header{
         cursor: pointer;
     }
 }
+/* PAGINA INDEX */
 .modal-menu{
     position: absolute;
     z-index: 10;
@@ -47,14 +49,15 @@ header{
     top: 4.4rem;
     width: 80vw;
     height: calc(100% - 4.4rem);
-    background-image: linear-gradient(to right, transparent, #08bd05,#069b04, #036b02, var(--dark-green));
+    background-color: gray;
     font-family: cursive;
     font-style: italic;
-    color: white;
-    text-shadow: 0 0 0.5rem black;
+    color: black;
+    text-shadow: 0 0 0.5rem white;
     transform: translateX(100%);
     transition-property: all;
     transition-duration: 1s;
+
     
     li{
         display: flex;
@@ -63,6 +66,8 @@ header{
         font-size: 1.5rem;
         margin-top: 1rem;
         list-style-type: none;
+        color: black;
+
         
     }
 }
@@ -70,56 +75,56 @@ header{
     transform: translateX(0%);
 }
 .category-menu{
-    position: absolute;
-    display: flex;
-    justify-content: space-evenly;
-    width: 100vw;
-    top: 4.5rem;
-    cursor: pointer;
-    
-    a{
-        text-decoration: none;
-    }
-    .itens{
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        
-        .quadro{
             position: absolute;
-            top: 1em;
-            background-color: rgba(128, 128, 128, 0.24);
-            width: 4em;
-            height: 4em;
-            transform: rotate(45deg);
-            box-shadow: 0.5em 0em 1em 0.2em black;
-            border-radius: 0.5em;
-        }
-        img{
-            z-index: 1;
-            position: relative;
-            top: 1.4em;
             display: flex;
-            width: 4.2em;
-        }
-        p{
-            z-index: 2;
-            position: relative;
-            font-family: 'Courier New', Courier, monospace;
-            font-weight: 800;
-            font-size: 1.2em;
-            letter-spacing: 0.1em;
-            color: black;
-            text-shadow: 0 0 0.1em black;
-            background-image: radial-gradient( white, transparent);
-            top: 1.5em;
-            left: 0.2em;
-        }
-    }
+            justify-content: space-evenly;
+            width: 100vw;
+            top: 4.5rem;
+            cursor: pointer;
+            
+            a{
+                text-decoration: none;
+            }
+            .itens{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                
+                .quadro{
+                    position: absolute;
+                    top: 1em;
+                    background-color: rgba(128, 128, 128, 0.24);
+                    width: 4em;
+                    height: 4em;
+                    transform: rotate(45deg);
+                    box-shadow: 0.5em 0em 1em 0.2em black;
+                    border-radius: 0.5em;
+                }
+                img{
+                    z-index: 1;
+                    position: relative;
+                    top: 1.4em;
+                    display: flex;
+                    width: 4.2em;
+                }
+                p{
+                    z-index: 2;
+                    position: relative;
+                    font-family: 'Courier New', Courier, monospace;
+                    font-weight: 800;
+                    font-size: 1.2em;
+                    letter-spacing: 0.1em;
+                    color: black;
+                    text-shadow: 0 0 0.1em black;
+                    background-image: radial-gradient( white, transparent);
+                    top: 1.5em;
+                    left: 0.2em;
+                }
+            }
 }
-.barra-seach{
+.barra-search{
     position: absolute;
     top: 12rem;
     left:2.5vw;
@@ -129,12 +134,12 @@ header{
     width: 95vw;
     height: 2rem;
 
-    .box-seach{
+    .box-search{
         display: flex;
         background-color: white;
         font-weight: 800;
         width: 60%;
-        height:1.8rem;
+        /* height:1.8rem; */
         border-radius: 0.5em;
         box-shadow: 0 0 0.5em 0.1em black;
 
@@ -148,7 +153,7 @@ header{
             border: none;
             border-radius: 0.5em;
         }
-        .btn-seach{
+        .btn-search{
             display: flex;
             align-items: center;
             justify-content: center;
@@ -220,26 +225,26 @@ header{
         height: calc(100vh - 15rem);
     }
 }
-section{
+.box-card{
     position: absolute;
-    margin: 0.5em 0.5em;
-    width: 100vw;
     display: grid;
-    grid-template-columns: repeat(2, 50%);
-    gap: 0.5em ;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1em 1em;
+    width: 100vw;
+    margin: 1em auto;
     text-align: center;
 
     table{
-        border: 0.1em solid black;
+        border: 0.2em solid black;
         border-radius: 0.5em;
-        
+            
         .img img{
             width: 80%;
-            height: 6em;
+            height: 7em;
         }
         .title{
             position: relative;
-            top: -0.3em;
+            top: -0.1em;
             font-family: 'Lucida Sans', 'Lucida Sans Regular', Verdana, sans-serif;
             background-color: var(--orange);
             text-shadow: 0 0 0.3em white;
@@ -252,7 +257,7 @@ section{
             background-image: linear-gradient(var(--light-grenn), white);
         
             .price{
-    
+        
                 .cifrao{
                     font-size: 1em;
                     color: white;
@@ -267,16 +272,16 @@ section{
             }
             .desc{
                 margin: -0.4em ;
-    
+        
                 .peso{
-                    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-                    font-size: 1.5em;
-                    color: black;
-                    text-shadow: 0 0 0.2em white;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 1.5em;
+        color: black;
+        text-shadow: 0 0 0.2em white;
                 }
                 .peso-qnt{
-                    margin: ;
-                    color: black;
+        margin: ;
+        color: black;
                 }
             }
         }
@@ -287,7 +292,7 @@ section{
             justify-content: space-evenly;
             text-align: center;
             font-weight: 800;
-    
+        
             .input-qnt{
                 text-align: center;
                 width: 20%;
@@ -307,15 +312,232 @@ section{
             height: 2em;
             display: flex;
             align-items: center;
-            justify-content: space-evenly;
+            justify-content: center;
             border-radius: 0 0 0.5em 0.5em;
             border: none;
             background-color: var(--orange);
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-            font-size: 1.2em;
+            font-size: 1.5em;
+            font-style: italic;
             letter-spacing: 0.05em;
             box-shadow: -0.1em -0.1em 0.5em 0.1em black;
             cursor: pointer;
         }
     }
+}
+/* PAGINA DE CADASTRO DE PRODUTOS */
+.cadastro-produtos{
+    position: fixed;
+    width: 80vw;
+    margin: 5rem 10vw;
+
+    form{
+        width: 100%;
+
+        input{
+        padding-left: 0.3em;
+        }
+
+        fieldset{
+        border-radius: 1em;
+        padding: 1em;
+        font-size: 1.2em;
+
+        legend{
+                font-size: 1.5em;
+                font-family: 'Franklin Gothic Medium', sans-serif;
+            }
+            .botoes{
+                display: flex;
+                justify-content: space-around;
+                width: 8em;
+                .cadastrar{
+                    background-color: var(--light-grenn);
+                    color: white;
+                    padding: 0.5em;
+                    font-weight: 500;
+                    border-radius: 0.5em;
+                }
+                a i{
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
+}
+.listagem-produtos{
+    position: fixed;
+    width: 100vw;
+    top: 25rem;
+    .form-busca{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        
+        input{
+            width: 60%;
+            padding-left: 0.5em;
+            font-size: 1.5em;
+        }
+        button{
+            margin-left: 1em;
+            background-color: var(--light-grenn);
+            padding: 0.5em;
+        }
+    }
+
+    .table-listagem{
+        
+        
+        table{
+            width: 100%;
+            
+            td{
+                height: 2em;
+            }
+
+            input{
+                width: 100%;
+                height: 2em;
+            }
+            .acoes{
+                display: flex;
+                justify-content: space-evenly;
+
+                .btn-editar{
+                    background-color: var(--orange);
+                    color: white;
+                    padding: 0.2em;
+                    border: none;
+                    border-radius: 30%;
+                    text-align: center;
+                    width: 2em;
+
+                }
+                .btn-excluir{
+                    background-color: var(--red);
+                    padding: 0.2em;
+                    color: white;
+                    border: none;
+                    border-radius: 30%;
+                    text-align: center;
+                    width: 2em;
+                }
+            }
+        }
+    }
+
+}
+.clientes{
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    margin: 5rem auto;
+}
+.tabela{
+    width: 80vw;
+    display: flex;
+    justify-content: space-around;
+    margin: 18rem 10vw;
+    
+    table{
+        width: 60%;
+        padding: 0.2rem;
+    
+    }
+}
+.busca{
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    width: 50vw;
+    margin: 15rem 25vw;
+}
+/* PAGINA DE CADASTRO DOS ADMINISTRADORES */
+.btn-home{
+    margin: 6rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.container{
+    position: absolute;
+    width: 50vw;
+    margin: -5rem 25vw;
+    border: 0.1rem solid black;
+    padding: 0.5em;
+
+    div{
+        margin-top: 0.4em;
+    }
+    .btn-cadastrar{
+        margin-top: 0.5em;
+    }
+}
+.formSearch{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50vw;
+        margin: 2rem 25vw;
+
+        .search{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            
+            input{
+                width: 85%;
+            }
+            button{
+                margin-left: 0.2em;
+            }
+        }
+}
+.box-table{
+    position: absolute;
+    width: 65vw;
+    margin: 5rem 17.5vw;
+
+    .table{
+        width: 65vw;
+
+        input{
+            height: 2em;
+        }
+        .acoes-admin{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+    
+            .btn-editar, .btn-excluir{
+                width: 2em;
+                height: 2em;
+                border: none;
+                border-radius: 20%;
+            }
+            .btn-editar{
+                background-color:orange;
+                i{
+                    font-size: 1.5em;
+                    text-shadow: 0 0 0.1em white;
+                }
+            }
+            .btn-excluir{
+                background-color:red;
+                i{
+                    font-size: 1.5em;
+                    text-shadow: 0 0 0.3em white;
+                }
+            }
+        }
+    }
+}
+.inputSenha{
+    width: 5rem;
+    text-align: center;
 }
