@@ -47,11 +47,11 @@
             </tr>
             <tr>
                     <td>
-                        <div class="qnt">
-                            <button class="btn-qnt">-</button>
-                            <input type="text" class="input-qnt" value="1" autofocus>
-                            <button class="btn-qnt">+</button>
-                        </div>
+                            <div class="qnt">
+                                <button name="btn-menos" class="btn-qnt btn-menos" id="btn-menos">-</button>
+                                <input type="text" value="1" id="input-qnt" class="input-qnt">
+                                <button name="btn-mais" class="btn-qnt" id="btn-mais">+</button>
+                            </div>
                     </td>
             </tr>
             <tr>

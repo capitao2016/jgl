@@ -8,7 +8,6 @@
     <script type="text/javascript" src="script.js" defer></script>
     <script src="https://kit.fontawesome.com/70c6f55f6a.js" crossorigin="anonymous"></script>
 </head>
-<body>
     <header>
         <div class="logo"><img src="../Imagens/Icones/arte.png" alt="logo"></div>
         <div class="menu"><i class="fa-solid fa-bars"></i></div>
@@ -53,12 +52,96 @@
        </div>
        <div class="box-cart">
             <div class="cart">
-                <i class="fa-solid fa-cart-shopping"></i>
+                <a href="" class="icon-cart"><i class="fa-solid fa-cart-shopping"></i></a>
                 <span class="qnt-cart">10</span>
             </div>
             <p class="cifrao">R$</p>
             <span class="valor-cart">255,50</span>
        </div>
+    </div>
+    <!-- MODAL OF CART -->
+    <div class="modal-cart">
+        <div class="box-cart">
+            <div class="box-closed">
+                <h1>X</h1>
+            </div>
+            <div class="tittle-cart">
+                <h1>Meu Carrinho</h1>
+            </div>
+            <div class="table-cart">
+                <table>
+                    <thead>
+                        <tr class="table-header">
+                            <th>PRODUTO</th>
+                            <th>QUANTIDADE</th>
+                            <th>PREÇO</th>
+                            <th>TOTAL</th>
+                            <th>~</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr class="table-row">
+                                <td class="td-produtos">
+                                    <div class="name-product">
+                                        <img src="../Imagens/Frutas/Goiaba Madura.png" alt="abacate">
+                                        <p>Goiaba Madura</p>
+                                    </div>
+                                    <div class="desc">
+                                        <p><span id="desc-und">4 a 6</span> <span>Und.</span></p>
+                                    </div>
+                                </td>
+                                <td class="table-qnt">
+                                    <div class="number">
+                                        <button id="btn-menos"><i class="fa-solid fa-minus"></i></button>
+                                        <input type="text" value="1">
+                                        <button id="btn-mais"><i class="fa-solid fa-plus"></i></button>
+                                    </div>
+                                    <div class="text">
+                                        <p class="text-peso">500 gramas</p>
+                                    </div>
+                                </td>
+                                <td class="preco">5,00</td>
+                                <td class="total">15,00</td>
+                                <td class="total"><i class="fa-solid fa-trash-can"></i></td>
+                            </tr>
+                            <tr class="table-row">
+                                <td class="td-produtos">
+                                    <div class="name-product">
+                                        <img src="../Imagens/Frutas/Goiaba Madura.png" alt="abacate">
+                                        <p>Goiaba Madura</p>
+                                    </div>
+                                    <div class="desc">
+                                        <p><span id="desc-und">4 a 6</span> <span>Und.</span></p>
+                                    </div>
+                                </td>
+                                <td class="table-qnt">
+                                    <div class="number">
+                                        <button id="btn-menos"><i class="fa-solid fa-minus"></i></button>
+                                        <input type="text" value="1">
+                                        <button id="btn-mais"><i class="fa-solid fa-plus"></i></button>
+                                    </div>
+                                    <div class="text">
+                                        <p class="text-peso">500 gramas</p>
+                                    </div>
+                                </td>
+                                <td class="preco">5,00</td>
+                                <td class="total">15,00</td>
+                                <td class="total"><i class="fa-solid fa-trash-can"></i></td>
+                            </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td class="rodape-cart">
+                                <button class="btn1">Limpar Carrinho</button>
+                                <button class="btn2">Finalizar Compra</button>
+                                <h2>R$</h2>
+                                <h2 class="rodape-total">00.00</h1>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
     </div>
     <main class="frame">
         <iframe src="" name="frame" class="list-products">

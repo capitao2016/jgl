@@ -4,6 +4,7 @@
     if(isset($_POST['submit'])){
         
         $titulo = $_POST['titulo'];
+        $quantidade = $_POST['quantidade'];
         $preco = $_POST['preco'];
         $peso = $_POST['peso'];
         $descricao = $_POST['descricao'];
@@ -20,7 +21,7 @@
         $path = $pasta . $novoNome . '.' . $extensao;
         $result = move_uploaded_file($imagem['tmp_name'], $path);
 
-        MYSQLI_QUERY($connexxao, "INSERT INTO produtos (titulo, preco, peso, descricao, categoria, imagem, imagemNome) VALUES('$titulo', '$preco', '$peso', '$descricao', '$categoria', '$nomeImagem', '$path')");
+        MYSQLI_QUERY($connexxao, "INSERT INTO produtos (titulo, quantidade, preco, peso, descricao, categoria, imagem, imagemNome) VALUES('$titulo', '$quantidade', '$preco', '$peso', '$descricao', '$categoria', '$nomeImagem', '$path')");
         }
 ?>
 
@@ -54,7 +55,8 @@
             <fieldset>
                 <legend>Cadastrar Produto</legend>
                 Titulo: <input type="text" name="titulo" class="titulo" autofocus><br>
-                Preço: <input type="text" name="preco" class="preco"><br>
+                Estoque: <input type="number" name="quantidade" class="qnt"><br>
+                Preço: <input type="number" name="preco" class="preco"><br>
                 Pêso: <input type="text" name="peso" class="peso"><br>
                 Descrição: <input type="text" name="descricao" class="quant"><br>
                 Categoria: <input type="text" name="categoria" class="categoria" ><br>
@@ -85,6 +87,7 @@
                 <thead>
                     <tr>
                     <th>NOME</th>
+                    <th>QNT</th>
                     <th>PREÇO</th>
                     <th>PÊSO</th>
                     <th>DESC.</th>
@@ -97,6 +100,7 @@
                         while($linha = mysqli_fetch_assoc($dados)){
                             $id = $linha["ID"];
                             $titulo = $linha["titulo"];
+                            $quantidade = $linha["quantidade"];
                             $preco = $linha["preco"];
                             $peso = $linha["peso"];
                             $descricao = $linha["descricao"];
@@ -105,6 +109,7 @@
                         <tr>
                             <form action="script.php?id=<?php echo $id;?>" method="POST">
                                 <td><input type="text" name="titulo" value="<?php echo $titulo;?>"></td>
+                                <td class="input-qnt"><input type="number" name="quantidade" value="<?php echo $quantidade;?>"></td>
                                 <td><input type="text" name="preco" class="input-preco" value="<?php echo $preco;?>"></td>
                                 <td><input type="text" name="peso" value="<?php echo $peso;?>"></td>
                                 <td><input type="text" name="descricao" class="inputCP" value="<?php echo $descricao;?>"></td>
