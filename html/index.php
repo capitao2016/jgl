@@ -2,7 +2,7 @@
 <?php
     session_start();
     // session_destroy();
-    include ('/config/conexao.php');
+    include ('../config/conexao.php');
 
     $sql = "SELECT * FROM cd_produtos";
     $query = mysqli_query($con, $sql);
@@ -24,12 +24,6 @@
                 $_SESSION['carrinho'] [$cod] =$bd2;
             }
         }
-        // echo $bd2['item'];
-        // print_r($_SESSION['carrinho']);
-        // echo "</br>";
-        // print_r($_SESSION['usuario']);
-  
-        
 ?>
 
 <!DOCTYPE html>
@@ -39,8 +33,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-    <link rel="stylesheet" href="/css/index.css">
-    <script src="/js/index.js" defer></script>
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="./js/index.js" defer></script>
     <title>JGL</title>
 </head>
 <body>
@@ -50,8 +44,8 @@
         </div>
         <div class="logotipo">
             <div class="logo">
-                <a href="index.php">
-                    <img src="/Imagens/Icones/arte.png" alt="logotipo">
+                <a href="../index.php">
+                    <img src="../Imagens/Icones/arte.png" alt="logotipo">
                 </a>
             </div>
         </div>
@@ -96,9 +90,9 @@
                     </div>
                 </div>
                 <div class="categorias">
-                    <a href="/html/frutas.php" class="frutas cat">Frutas</a>
-                    <a href="/html/verduras.php" class="verdeuras cat">Verduras</a>
-                    <a href="/html/raizes.php" class="raizes cat">Raizes</a>
+                    <a href="../html/frutas.php" class="frutas cat">Frutas</a>
+                    <a href="../html/verduras.php" class="verdeuras cat">Verduras</a>
+                    <a href="../html/raizes.php" class="raizes cat">Raizes</a>
                     <a href="" class="temperos cat">Temperos</a>
                 </div>
                 <div class="container_iframe" id="iframe">
@@ -128,7 +122,7 @@
                                                     echo "<tr><td colspan='6'><h1 class='cart_vazio_text'>Carrinho Vazio!</h1></td></tr>";
                                                     echo "<tr><td></td></tr>";
                                                     echo "<tr><td></td></tr>";
-                                                    echo "<tr> <td colspan='6'> <a href='/html/index.php'><button class='btn_cart_vazio'>Pagina do Menu</button></a> </td> </tr>";
+                                                    echo "<tr> <td colspan='6'> <a href='../html/index.php'><button class='btn_cart_vazio'>Pagina do Menu</button></a> </td> </tr>";
                                                 }else {
                                                     foreach($_SESSION['carrinho'] as $produto){
                                                             $cod_item = $produto['cod'];
@@ -143,7 +137,7 @@
                                                                     <td>$qnt</td>
                                                                     <td>$preco</td>
                                                                     <td name='sub'>$total</td>
-                                                                    <td><a href='/scripts/excluir_item.php?cod=$cod_item'><span class='material-icons'>delete</span></a></td>
+                                                                    <td><a href='../scripts/excluir_item.php?cod=$cod_item'><span class='material-icons'>delete</span></a></td>
                                                                 </tr>
                                                                 ";
                                                         }}
@@ -206,7 +200,7 @@
                         </div>
                 </div>
                 <div class="btn_buy">
-                    <a href="/html/checkout.php"><button><p>Finalizar Pedido</p></button></a>
+                    <a href="../html/checkout.php"><button><p>Finalizar Pedido</p></button></a>
                 </div>
             </div>
         </div>    

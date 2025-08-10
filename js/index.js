@@ -18,4 +18,3 @@ ajax.onreadystatechange = function (){
 ajax.open("POST", "index.php");
 
 ajax.send();
-

@@ -312,7 +312,7 @@
                         </div>
                         <button id="continuar">Continuar</button>
                         <button>
-                            <a href="../html/pagamento.php">Continuar</a>
+                            <a href="../html/pagameto.php">Continuar</a>
                         </button>
                     </form>
             </div>
