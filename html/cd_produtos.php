@@ -74,7 +74,7 @@
                 </div><br>
                 <div class="box">
                     <div class="label">
-                        <label for="preco">Nome</label>
+                        <label for="nome">Nome</label>
                     </div>
                     <div class="input">
                         <input type="text" name="item" class="nome" id="nome">
@@ -90,7 +90,7 @@
                 </div><br>
                 <div class="box">
                     <div class="label">
-                        <label for="preco">Tipo</label>
+                        <label for="tipo">Tipo</label>
                     </div>
                     <div class="input">
                         <input type="text" name="tipo" class="tipo" id="tipo">
@@ -98,7 +98,7 @@
                 </div><br>
                 <div class="box">
                     <div class="label">
-                        <label for="preco">Pêso</label>
+                        <label for="peso">Pêso</label>
                     </div>
                     <div class="input">
                         <input type="text" name="peso" class="peso" id="peso">
@@ -106,7 +106,7 @@
                 </div><br>
                 <div class="box">
                     <div class="label">
-                        <label for="preco">Categoria.</label>
+                        <label for="categoria">Categoria.</label>
                     </div>
                     <div class="input">
                         <input type="text" name="categoria" class="categoria" id="categoria">
@@ -117,7 +117,7 @@
                         <label for="img">Imagem</label>
                     </div>
                     <div class="input">
-                        <input type="file" name="img" class="img" id="img">
+                        <input type="file" accept=".jpg, .jpeg, .png" name="img" class="img" id="img">
                     </div>
                 </div>
                 <div class="btns">
