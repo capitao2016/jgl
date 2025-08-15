@@ -34,7 +34,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
     <link rel="stylesheet" href="../css/index.css">
-    <script src="./js/index.js" defer></script>
+    <script src="../js/index.js" defer></script>
     <title>JGL</title>
 </head>
 <body>
@@ -44,7 +44,7 @@
         </div>
         <div class="logotipo">
             <div class="logo">
-                <a href="../index.php">
+                <a href="../html/index.php">
                     <img src="../Imagens/Icones/arte.png" alt="logotipo">
                 </a>
             </div>
@@ -95,9 +95,7 @@
                     <a href="../html/raizes.php" class="raizes cat">Raizes</a>
                     <a href="" class="temperos cat">Temperos</a>
                 </div>
-                <div class="container_iframe" id="iframe">
-                   
-                </div>
+                <div class="container_iframe" id="iframe"></div>
             </div>
         <!-- CONTAINER RESUMO -->
             <div class="container_resumo">
@@ -130,16 +128,17 @@
                                                             $qnt = $produto['qnt'];
                                                             $preco = $produto['preco'];
                                                             $total = $produto['total'];
-                                                           echo "
+                                                            
+                                                            echo "
                                                                 <tr>
                                                                     <td>$cod_item</td>
                                                                     <td>$item</td>
                                                                     <td>$qnt</td>
                                                                     <td>$preco</td>
                                                                     <td name='sub'>$total</td>
-                                                                    <td><a href='../scripts/excluir_item.php?cod=$cod_item'><span class='material-icons'>delete</span></a></td>
+                                                                    <td><a href='../scripts/excluir_item.php?cod=$cod_item' class='deleteItemCart'><span class='material-icons'>delete</span></a></td>
                                                                 </tr>
-                                                                ";
+                                                            ";
                                                         }}
                                     ?>
                                 </tbody>
@@ -211,7 +210,7 @@
             <h1>X</h1>
         </div>
         <div class="menu_lista">
-            <a href="/html/cd_produtos.php">Cadastrar Produtos</a>
+            <a href="../html/cd_produtos.php">Cadastrar Produtos</a>
         </div>                                 
     </div>
 </body>

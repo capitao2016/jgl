@@ -30,7 +30,6 @@
       rel="stylesheet">
     <link rel="stylesheet" href="../css/cd_produtos.css">
     <script src="../js/cd_produtos.js" defer></script>
-    <script src="../js/menu.js" defer></script>
     <title>JGL</title>
 </head>
 <body>
@@ -56,12 +55,12 @@
         <h1>CADASTRO DE PRODUTOS</h1>
         <div class="cadastro">
              <?php 
-             if(isset($_GET['cod'])){
+                if(isset($_GET['cod'])){
 
-                 $cod = $_GET['cod'];
-                 $sqlEdite = mysqli_query($con, "SELECT * FROM cd_produtos WHERE cod = $cod");
-                 $rows = mysqli_fetch_assoc($sqlEdite);
-             }
+                    $cod = $_GET['cod'];
+                    $sqlEdite = mysqli_query($con, "SELECT * FROM cd_produtos WHERE cod = $cod");
+                    $rows = mysqli_fetch_assoc($sqlEdite);
+                }
             ?>
             <form action="" method="POST" enctype="multipart/form-data">
                 <div class="box">
@@ -117,7 +116,7 @@
                         <label for="img">Imagem</label>
                     </div>
                     <div class="input">
-                        <input type="file" accept=".jpg, .jpeg, .png" name="img" class="img" id="img">
+                        <input type="file" name="img" class="img" id="img">
                     </div>
                 </div>
                 <div class="btns">

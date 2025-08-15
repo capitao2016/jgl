@@ -339,6 +339,19 @@ main{
                             cursor: pointer;
 
                         }
+                        .btn_continuarComprando{
+                            width: 15em;
+                            height: 2em;
+                            border-radius: 0.5em;
+                            font-family:cursive;
+                            font-size: 1em;
+                            letter-spacing: 0.1em;
+                            background-color: yellow;
+                            box-shadow: 0 0 0.5em 0.1em black;
+                            border: none;
+                            cursor: pointer;
+
+                        }
                     }
                 }
                 .footer{

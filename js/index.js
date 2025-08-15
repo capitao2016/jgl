@@ -8,13 +8,13 @@ menu.addEventListener('click', () =>{
 f_menu_lateral.addEventListener('click', () =>{
     menu_modal.classList.toggle('open')
 })
-var ajax = new XMLHttpRequest();
+// var ajax = new XMLHttpRequest();
 
-ajax.onreadystatechange = function (){
-    if(ajax.readyState == 4){
-        console.log(ajax);
-    }
-}
-ajax.open("POST", "index.php");
+// ajax.onreadystatechange = function (){
+//     if(ajax.readyState == 4){
+//         console.log(ajax);
+//     }
+// }
+// ajax.open("POST", "index.php");
 
-ajax.send();
+// ajax.send();
