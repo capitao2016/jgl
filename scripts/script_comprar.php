@@ -13,4 +13,4 @@
     $sql = "INSERT INTO pedidos (cod, item, qnt, preco, total, sessao) VALUES('$cod', '$item', '$qnt', '$preco', '$total', '$sessao')";
     $query = mysqli_query($con, $sql);
 
-    header("location: ../html/index.php?cod=$cod");
+    header("location: ../html/cart.php?cod=$cod");

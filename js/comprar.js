@@ -29,5 +29,3 @@ function decrementar(){
 }
 const mais = document.querySelector('.mais').addEventListener('click', () => incrementar())
 const menos = document.querySelector('.menos').addEventListener('click', () => decrementar())
-
-console.log(kilos)

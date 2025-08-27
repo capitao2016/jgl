@@ -10,6 +10,6 @@
           unset($_SESSION['carrinho'] [$cod]);
           // $sql = mysqli_query($con, "SELECT COUNT(id_pedido) AS qnt_item FROM  pedidos");
 
-          header("location: ../html/index.php");
+          header("location: ../html/cart.php");
         }
       }

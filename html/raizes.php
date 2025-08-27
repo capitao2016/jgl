@@ -57,18 +57,8 @@
             </a>
         </div>
     </header>
-    <nav>
-        <div class="label" id="label_produtos">
-            <label for="input_produtos">Produtos</label>
-        </div>
-        <div class="label" id="label_resumo">
-            <label for="input_resumo">Resumo</label>
-        </div>
-    </nav>
     <main>
         <div class="global">
-            <input type="radio" name="radios" id="input_produtos" class="input_produtos" checked>
-            <input type="radio" name="radios" id="input_resumo" class="input_resumo">
         <!-- CONTAINER PRODUTOS -->
             <div class="container_produtos first">
                 <div class="barra_info">
@@ -113,110 +103,6 @@
                         </button>
                     </form>
                     <?php };?>
-                </div>
-            </div>
-        <!-- CONTAINER RESUMO -->
-            <div class="container_resumo">
-                <div class="cart_item">
-                        <div class="table">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th rowspan="2" class="cod">Cod</th>
-                                        <th>Descrição</th>
-                                        <th>Qnt</th>
-                                        <th>Unit.</th>
-                                        <th>Total</th>
-                                        <th>~</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                   <?php
-                                        if(count($_SESSION['carrinho']) == 0){
-                                                    echo "<tr><td></td></tr>";
-                                                    echo "<tr><td></td></tr>";
-                                                    echo "<tr><td colspan='6'><h1 class='cart_vazio_text'>Carrinho Vazio!</h1></td></tr>";
-                                                    echo "<tr><td></td></tr>";
-                                                    echo "<tr><td></td></tr>";
-                                                    echo "<tr> <td colspan='6'> <a href='../html/index.php'><button class='btn_cart_vazio'>Pagina do Menu</button></a> </td> </tr>";
-                                                }else {
-                                                    foreach($_SESSION['carrinho'] as $produto){
-                                                            $cod_item = $produto['cod'];
-                                                            $item = $produto['item'];
-                                                            $qnt = $produto['qnt'];
-                                                            $preco = $produto['preco'];
-                                                            $total = $produto['total'];
-                                                           echo "
-                                                                <tr>
-                                                                    <td>$cod_item</td>
-                                                                    <td>$item</td>
-                                                                    <td>$qnt</td>
-                                                                    <td>$preco</td>
-                                                                    <td name='sub'>$total</td>
-                                                                    <td><a href='../scripts/excluir_item.php?cod=$cod_item'><span class='material-icons'>delete</span></a></td>
-                                                                </tr>
-                                                                ";
-                                                        }}
-                                    ?>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="footer">
-                            <table>
-                                <tbody>
-                                    <?php //Contagem de itens no carrinho de compras //
-                                        if(!count($_SESSION['carrinho']) == 0){
-                                            $sessaoCount = $_SESSION['usuario'];
-                                            $sqlcount = mysqli_query($con, "SELECT COUNT(id_pedido) AS qnt_item FROM  pedidos WHERE sessao = '$sessaoCount' ");
-                                            $bdcount = mysqli_fetch_assoc($sqlcount);
-
-                                            $qnt_item = $bdcount['qnt_item'];
-                                            echo "
-                                            <tr>
-                                                <td class='col-1' colspan='2'>Quantidade de Itens</td>
-                                                <td class='col-3'>$qnt_item</td>
-                                            </tr>
-                                            
-                                            ";
-                                        }
-                                    ?>
-                                    <?php // Resultado do Subtotal //
-                                        $sqlfooter = "SELECT total, sessao FROM pedidos";
-                                        $queryfooter = mysqli_query($con, $sqlfooter);
-                                        
-                                        $valor = 0;
-                                        while($date = mysqli_fetch_array($queryfooter)){
-                                            // $cod = $date['cod'];
-                                            $sessao = $date['sessao'];
-                                            if($sessao == $_SESSION['usuario']){
-                                                $total = $date['total'];
-                                                $valor += $total;
-                                            }
-                                        }
-                                    ?>
-                                        <tr>
-                                            <td class='col-1' colspan="2">Sub-Total</td>
-                                            <td class='col-3'><?php echo number_format($valor, 2, ',', '.');?></td>
-                                        </tr>
-                                    <?php // Cupom de descontos //
-                                    ?>
-                                        <tr>
-                                            <td class='col-1'>Cupom / desconto</td>
-                                            <td class='col-2'><input type='text' value='JGL2025' name="cupom" maxlength="10"></td>
-                                            <td class='col-3'><span>- </span>0,00</td>
-                                        </tr>
-                                    <?php // Total com os descontos //
-                                    ?>
-                                        <tr>
-                                            <td class='col-1' colspan="2">Total</td>
-                                            <td class='col-3'><span>= </span><?php echo number_format($valor, 2, ',', '.');?></td>
-                                        </tr>
-                                </tbody>
-                            </table>           
-                        </div>
-                </div>
-                <div class="btn_buy">
-                         <button><p>Pagamento</p></button>
                 </div>
             </div>
         </div>    

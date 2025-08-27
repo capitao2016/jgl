@@ -64,23 +64,18 @@ nav{
 main{
     position: fixed;
     width: 100vw;
-    height: calc(100% - 8em);
-    top: 8em;
+    height: calc(100% - 4em);
+    top: 5em;
     
     .global{
-        width: 200%;
+        width: 100%;
         height: 100%;
         display: flex;
         overflow: hidden;
 
-        .input_produtos, .input_resumo{
-            display: none;
-        }
         .container_produtos{
             width: 100%;
             height: 100%;
-            margin-left: 0%;
-            transition: 0.5s;
 
             .barra_info{
                 width: 100%;
@@ -101,12 +96,13 @@ main{
                         height: 2.5em;
                         display: flex;
                         align-items: center;
+                        justify-content: space-between;
                         border-radius: 2em;
                         background-color: white;
                         box-shadow: 0 0 0.3em 0.1em black;
-    
+                        
                         .search{
-                            width: 90%;
+                            width: 80%;
                             height: 100%;
                             border: none;
                             outline: none;
@@ -130,6 +126,8 @@ main{
                     display: flex;
                     background-color: rgba(0, 255, 8, 0.405);
                     border-bottom: 0.2em solid black;
+                    cursor: pointer;
+
 
                     .icon_cart{
                         width: 20%;
@@ -442,14 +440,8 @@ main{
             }
         }
     }
-        }
-        #input_produtos:checked ~ .first{
-            margin-left: 0%;
-        }
-        #input_resumo:checked ~ .first{
-            margin-left: -100%;
-        }
-        /* MENU MODAL LATERAL */
+}
+/* MENU MODAL LATERAL */
 .menu_modal{
     z-index: 10;
     position: fixed;

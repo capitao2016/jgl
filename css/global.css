@@ -3,9 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-html{
-    font-size: 62.5%;
-}
 :root{
     /* CORES PADRÕES */
     --dark-green: #014d00;
@@ -16,4 +13,10 @@ html{
     /* FONTES PADRÕES */
     --fonte-primaria: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     --fonte-secundaria: font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    height: 100vh;
 }

@@ -20,7 +20,7 @@
     <title>comprar</title>
 </head>
 <body>
-      <div class="modal_produtos" id="modal_produtos">
+    <div class="modal_produtos" id="modal_produtos">
         <div class="fechar" id="fechar">
                 <a href="../html/index.php"><button>FECHAR</button></a>
         </div>
