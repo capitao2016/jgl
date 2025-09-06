@@ -1,0 +1,94 @@
+<!-- APRESENTAÇÃO DOS PRODUTOS -->
+<?php
+session_start();
+// session_destroy();
+include('../config/conexao.php');
+
+$sql = "SELECT * FROM cd_produtos";
+$query = mysqli_query($con, $sql);
+?>
+<?php
+//  CRIANDO UMA SESSÃO CARRINHO //;
+if (!isset($_SESSION['carrinho'])) {
+    $_SESSION['carrinho'] = array();
+    $_SESSION['usuario'] = session_id();
+}
+
+if (isset($_GET['cod'])) { // get vindo na pagina comprar //
+    $cod = $_GET['cod'];
+    $sessao = $_SESSION['usuario'];
+    $sql2 = "SELECT * FROM pedidos WHERE cod = $cod AND sessao = '$sessao'";
+    $query2 = mysqli_query($con, $sql2);
+    $bd2 = mysqli_fetch_array($query2);
+    if (!isset($_SESSION['carrinho'][$cod])) {
+        $_SESSION['carrinho'][$cod] = $bd2;
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/index.js" defer></script>
+    <title>JGL</title>
+</head>
+
+<body>
+    <header>
+        <div class="jgl"><img src="../Imagens/outros/logotipo-removebg.png" alt="logo"></div>
+        <div class="hortifruti">
+            <h1>HORTIFRUTI</h1>
+        </div>
+        <div class="menu"><span class="material-icons">menu</span></div>
+    </header>
+    <div class="subTitulo">
+        <h3>Qualidade, frescor e praticidade em sua porta</h3>
+    </div>
+    <main>
+        <div class="global">
+            <!-- CONTAINER PRODUTOS -->
+            <div class="container_produtos">
+                <div class="barra_info">
+                    <div class="container_search">
+                        <div class="box_search">
+                            <input type="search" maxlength="20" class="search">
+                            <button>
+                                <span class="material-icons">search</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="container_cart" id="container_cart">
+                        <div class="icon_cart">
+                            <span class="material-icons">shopping_cart</span>
+                            <p id="iconeItemCart">9</p>
+                        </div>
+                        <div class="valor_icon">
+                            <span class="cifrao">R$</span>
+                            <span class="valor" id="valor">120,50</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="categorias">
+                    <a href="../html/frutas.php" class="frutas cat">Frutas</a>
+                    <a href="../html/verduras.php" class="verdeuras cat">Verduras</a>
+                    <a href="../html/raizes.php" class="raizes cat">Raizes</a>
+                    <a href="" class="temperos cat">Temperos</a>
+                </div>
+                <iframe class="container_iframe" id="iframe">
+            </div>
+        </div>
+        </div>
+    </main>
+    <!-- MODAL MENU LATERAL -->
+    <div class="modal_menu">
+        modal menu
+    </div>
+</body>
+
+</html>

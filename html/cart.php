@@ -35,6 +35,7 @@ if (isset($_GET['cod'])) { // get vindo na pagina comprar //
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
         rel="stylesheet">
     <link rel="stylesheet" href="../css/cart.css">
+    <script src="../js/cart.js" defer></script>
     <script src="../js/index.js" defer></script>
     <title>JGL</title>
 </head>
@@ -96,7 +97,7 @@ if (isset($_GET['cod'])) { // get vindo na pagina comprar //
                                             <tr>
                                                 <td>$cod_item</td>
                                                 <td>$item</td>
-                                                <td>$qnt</td>
+                                                <td'>$qnt</td>
                                                 <td>$preco</td>
                                                 <td name='sub'>$total</td>
                                                 <td><a href='../scripts/excluir_item.php?cod=$cod_item' class='deleteItemCart'><span class='material-icons delete'>delete</span></a>
@@ -125,7 +126,7 @@ if (isset($_GET['cod'])) { // get vindo na pagina comprar //
                                         echo "
                                             <tr>
                                                 <td class='col-1' colspan='2'>Quantidade de Itens</td>
-                                                <td class='col-3'>$qnt_item</td>
+                                                <td class='col-3' id='qntItemCart'>$qnt_item</td>
                                             </tr>
                                                         
                                         ";
@@ -160,7 +161,7 @@ if (isset($_GET['cod'])) { // get vindo na pagina comprar //
                                 ?>
                                 <tr>
                                     <td class='col-1' colspan="2">Total</td>
-                                    <td class='col-3'><span>= </span><?php echo number_format($valor, 2, ',', '.'); ?></td>
+                                    <td class='col-3'><span>= </span><span id='totalCart'><?php echo number_format($valor, 2, ',', '.'); ?></span></td>
                                 </tr>
                             </tbody>
                         </table>

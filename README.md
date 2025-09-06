@@ -15,3 +15,6 @@
     $jonquil: rgba(249, 206, 41, 1);
     $pakistan-green: rgba(15, 75, 3, 1);
     $forest-green: rgba(39, 144, 51, 1);
+
+# FONTE HEADER
+Fonte cabeçalho - 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
