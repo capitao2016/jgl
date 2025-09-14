@@ -66,8 +66,9 @@
                 }
             }
         }
-
         .subTitulo {
+            width: 100%;
+            height: 2em;
             background-color: rgba(5, 77, 5, 0.555);
             padding: 0.1em;
 

@@ -16,7 +16,7 @@
 
             .container_search {
                 width: 70%;
-                height: 1005;
+                height: 100%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -107,21 +107,31 @@
                 }
             }
         }
-
         .categorias {
             width: 100%;
-            height: 2.5em;
-            margin-top: 1em;
+            height: 3em;
+            margin-top: 2em;
             display: grid;
+            gap: 1em;
+            padding: 0 1em;
             grid-template-columns: repeat(4, 1fr);
-
+            overflow: hidden;
+            
             .cat {
-                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                height: auto;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
                 font-style: italic;
                 font-size: 1.8em;
-                text-align: center;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 10em;
                 text-decoration: none;
                 color: black;
+            }
+            .catColor{
+                background-color: orange;
             }
         }
     </style>
@@ -149,10 +159,10 @@
         </div>
     </div>
     <div class="categorias">
-        <a href="../html/frutas.php" class="frutas cat">Frutas</a>
-        <a href="../html/verduras.php" class="verdeuras cat">Verduras</a>
-        <a href="../html/raizes.php" class="raizes cat">Raizes</a>
-        <a href="" class="temperos cat">Temperos</a>
+        <a href="../html/frutas.php" target="iframe" class="frutas cat">Frutas</a>
+        <a href="../html/verduras.php" target="iframe" class="verdeuras cat">Verduras</a>
+        <a href="../html/raizes.php" target="iframe" class="raizes cat">Raizes</a>
+        <a href="" target="iframe" class="temperos cat">Temperos</a>
     </div>
 </body>
 </html>

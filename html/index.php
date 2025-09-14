@@ -40,6 +40,6 @@ if (isset($_GET['cod'])) { // get vindo na pagina comprar //
     <title>JGL</title>
 </head>
 <body>
-    <iframe class="iframe" id="iframe"></iframe>
+    <iframe class="iframe" id="iframe" name="iframe"></iframe>
 </body>
 </html>
